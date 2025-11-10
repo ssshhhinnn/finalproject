@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Anna Photo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">ANNA PHOTO</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h1>Contact</h1>
+
+    <form id="contactForm" novalidate>
+      <div class="mb-3">
+        <label class="form-label">Name *</label>
+        <input id="name" class="form-control" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email *</label>
+        <input id="email" class="form-control" type="email" required>
+        <div class="invalid-feedback" id="emailError">Enter a valid email.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password (для демо) *</label>
+        <input id="password" class="form-control" type="password" required>
+        <div id="pwdIndicator" class="pwd-indicator">Strength: <span id="pwdStrength">—</span></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password *</label>
+        <input id="passwordConfirm" class="form-control" type="password" required>
+        <div class="invalid-feedback" id="pwdConfirmError">Passwords must match.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message *</label>
+        <textarea id="message" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year5"></span> Anna Photo</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

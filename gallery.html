@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — Anna Photo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">ANNA PHOTO</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Gallery</h1>
+
+    <div class="controls">
+      <input id="searchGallery" type="search" placeholder="Search by title or tag...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+      </div>
+    </div>
+
+    <div id="galleryGrid" class="gallery-grid">
+      <!-- карточки генерируются в script.js или можно вставить статически -->
+      <!-- пример -->
+      <figure class="gallery-item" data-category="portrait" data-title="City Light">
+        <img src="images/gal1.jpg" alt="City Light" loading="lazy">
+        <figcaption>City Light</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="nature" data-title="Morning Fog">
+        <img src="images/gal2.jpg" alt="Morning Fog" loading="lazy">
+        <figcaption>Morning Fog</figcaption>
+      </figure>
+      <!-- ... -->
+    </div>
+  </main>
+
+  <!-- Simple lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose">×</button>
+    <button class="lb-prev" id="lbPrev">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-next" id="lbNext">›</button>
+    <div id="lbCaption"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> Anna Photo</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
