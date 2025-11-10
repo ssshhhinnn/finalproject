@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Behind The Lens — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg class="camera" width="28" height="28" viewBox="0 0 24 24"><path fill="#c40000" d="M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg><span>Behind The Lens</span></a>
+      <button class="nav-toggle" id="navToggle3" aria-expanded="false" aria-controls="mainNav3"><span class="sr-only">Toggle navigation</span><span class="hamburger"></span></button>
+      <nav id="mainNav3" class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="portfolio" style="padding:28px 0">
+      <h2>Portfolio</h2>
+      <div class="gallery-grid" aria-label="Portfolio gallery">
+        <figure><img src="пикча.jpeg" alt="Photo 1" loading="lazy"></figure>
+        <figure><img src="пикча1.jpeg" alt="Photo 2" loading="lazy"></figure>
+        <figure><img src="пикча2.jpeg" alt="Photo 3" loading="lazy"></figure>
+        <figure><img src="пикча3.jpeg" alt="Photo 4" loading="lazy"></figure>
+        <figure><img src="пикча4.jpeg" alt="Photo 5" loading="lazy"></figure>
+        <figure><img src="пикча5.jpeg" alt="Photo 6" loading="lazy"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Behind The Lens — Sabina</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){const btn=document.getElementById('navToggle3'),nav=document.getElementById('mainNav3');btn.addEventListener('click',()=>{const expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!expanded));nav.classList.toggle('open')});document.querySelectorAll('#mainNav3 a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}))})();
+  </script>
+</body>
+</html>
